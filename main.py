@@ -194,7 +194,7 @@ if submit:
     # 构建历史（不包含当前轮次）
     history_messages = build_history_messages_excluding_current_round()
 
-    st.markdown("## 本轮模型输出（并发流式）")
+    st.markdown("## 本轮讨论")
     tabs = st.tabs([label for label, _ in MODELS])
 
     # 在每个 tab 创建一个 placeholder，用于流式更新
@@ -237,3 +237,4 @@ if submit:
 
     st.success("本轮三个模型已全部完成，并已统一写入历史。继续追问即可。")
     st.rerun()
+
